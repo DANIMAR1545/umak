@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Podés contactarnos para realizarnos consultas, compras mayoristas o minoristas.">
+        <!--LINK DE BOOSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--LINK DE CSS-->
+        <link rel="stylesheet" href="../css/pruebacss.css">
+        <!--ICONO EN NAVEGADOR-->
+        <link rel="icon" type="image/jpeg" href="../media/logoUmak.jpeg">
+        <!--ESTILO DE LETRA EN ARCHIVO-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+        <!--TITULO EN NAVEGADOR-->
+        <title>Contacto</title>
+    </head>
+    <body>
+        <div class="grilla">
+            <!--COMIENZA EL HEADER-->
+            <header>
+                <div class="header__estructura">
+                    <a href="../index.html" class="header__link"><img src="../media/logoUmak.ico" alt=""  class="header__imagen"></a>
+                    <h1 class="header__titulo">Un viaje de sabores</h1>
+                </div>
+            </header>                
+            <!--FINALIZA EL HEADER-->
+        <!--COMIENZA EL NAV-->
+        <nav class="navegador">
+            <ul class="navegador__lista">
+                <li class="navegador__item" class="navLi"><a href="../index.html" class="navegador__link">Home</a></li>
+                <li class="navegador__item"><a href="productos.html" class="navegador__link">Productos</a></li>
+                <li class="navegador__item"><a href="dondeComprar.html" class="navegador__link">Donde Comprar</a></li>
+                <li class="navegador__item"><a href="historia.html" class="navegador__link">Acerca de Nosotros</a></li>
+                <li class="navegador__item"><a href="contacto.html" class="navegador__link">Contacto</a></li>
+                <li class="navegador__item"><a href="novedades.html" class="navegador__link">Novedades</a></li>
+            </ul>
+        </nav>
+        <!--FINALIZA EL NAV-->
+        <!--COMIENZA EL MAIN-->
+        <main>
+            <h2 class="main__titulo1">CONTACTO</h2>
+            <br>
+            <h4 class="main__titulo4">¿Te gustaría enterarte de nuestras novedades?</h4>
+            <div class="formulario__div">
+                <form action="" method="" class="formulario__estilo">
+                    <fieldset class="formulario__campo">
+                        <legend class="formulario__titulo">DATOS PERSONALES</legend>
+                            <label for="" class="formulario__interfaz">Ingrese su nombre</label>
+                            <br>
+                            <input type="text" placeholder="Ingrese su nombre" id="nombre" class="formulario__item">
+                            <br>
+                            <label for="" class="formulario__interfaz">Ingrese su edad</label>
+                            <br>
+                            <input type="number" placeholder="Ingrese su edad" id="number" class="formulario__item">
+                            <br>
+                            <label for="" class="formulario__interfaz">Ingrese su e-mail</label>
+                            <br>
+                            <input type="email" placeholder="Ingrese su correo electronico" id="email" class="formulario__item">
+                            <br>
+                </fieldset>
+                <br>
+                <div>
+                    <h3 class="main__titulo2">¿PROBASTE NUESTROS PRODUCTOS?</h3>
+                    <br>
+                    SI<input type="radio" name="probar">
+                    NO<input type="radio" name="probar">
+                    <br>
+                    <p>OPCION DE CONSULTA</p>
+                    <select name="" id="">
+                        <option value="">CONSULTA</option>
+                        <option value="">COMPRA</option>
+                        <option value="">RECLAMO</option>
+                    </select>
+                    <br>
+                    <textarea name="comentario"></textarea>
+                    <input type="submit" class="boton">
+                    <br>
+                    <input type="reset" class="boton">
+                </div>
+            </form>
+            </div>
+        </main>
+        <!--FINALIZA EL MAIN-->  
+        <!--COMIENZA EL FOOTER-->
+        <footer>
+            <div>
+                <div class="footer__div">
+                    <nav class="footer__navegador">
+                        <ul class="footer__lista">
+                            <li><a href="#" class="footer__items">Instagram</a></li>
+                            <li><a href="#"class="footer__items">Facebook</a></li>
+                            <li><a href="#"class="footer__items">Twitter</a></li>
+                        </ul>
+                    </nav>
+                    <p class="footer__parrafo"> Copyright  | Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <!--FINALIZA EL FOOTER-->
+        <!--LINK DE SCRIPT DE BOOSTRAP-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

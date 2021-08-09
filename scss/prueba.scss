@@ -1,0 +1,269 @@
+$anchoTotal: 100%;
+$marginLeft: 18px;
+$ancho: 20px;
+
+/* RESETEO CSS */
+* {
+    margin:  0;
+    padding: 0;
+}
+
+
+
+/* RESPONSIVE PARA DIFERENTES TAMAÑOS DE PANTALLA */
+
+@media only screen and (max-width: 600px) {
+    .grilla {
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 150px 900px 200px;
+        grid-template-areas:    "header"
+                                "nav"
+                                "main"
+                                "footer";
+    }    
+}
+
+@media only screen and (min-width: 600px) {
+    .grilla {
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 100px 1200px 300px;
+        grid-template-areas:    "header"
+                                "nav"
+                                "main"
+                                "footer";
+    }    
+}
+
+@media only screen and (min-width: 992px) {
+    .grilla {
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 250px 1500px 330px;
+        grid-template-areas:    "header"
+                                "nav"
+                                "main"
+                                "footer";
+    }    
+}
+
+
+/* QUITAR VIÑETAS A UL DE TODA LA PAGINA */
+
+ul {
+    list-style-type: none;
+}
+
+/* DISEÑO HEADER */
+header {
+    background-color: rgb(230, 230, 230);
+    width: $anchoTotal;
+    height: max-content;
+    .header__estructura {
+        display: flex;
+        flex-direction: row;
+        .header__titulo {
+            color:rgb(179, 141, 45);
+            width: 60%;
+            justify-content: center;
+            text-align: center;
+            margin-top: 1.5%;
+            margin-bottom: 1.5%;
+        }
+        .header__link {
+            width: 15%;
+            align-items: flex-start;
+            .header__imagen {
+                width: $ancho *4;
+                align-items: flex-start;
+                padding-top: 3%;
+                margin-left: 3%;
+                margin-bottom: 3%;
+            }
+        }
+    }
+}
+
+
+/* COMIENZO ESTILO DEL NAV */
+
+@mixin nav($disposicion, $alineacion) {
+    display: $disposicion;
+    text-align: $alineacion;
+}
+.navegador {
+    &__lista {
+        @include nav(flex, right);
+        background:rgb(28, 46, 46);
+        line-height: 40px;
+        flex-flow: row wrap;
+    }
+    &__item {
+        @include nav(inline-block, center);
+        width: 100 px;
+    }
+    &__link {
+        color:rgb(202, 202, 199);
+        text-decoration: none;
+        display: block;
+        font: size 35px;
+        padding:5px 10px;
+    }
+    
+    &__link:hover {
+        background: rgb(110, 110, 92);
+        color: black;
+    }
+}
+
+/* FIN ESTILO DEL NAV */
+
+
+/* ESTILO FUENTE PARA TODA LA PAGINA */
+
+body {
+    background-color: rgb(207, 206, 206);
+}
+
+@keyframes aparecer {
+    
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+
+
+/* ESTILO DE CARDS */
+.card {
+    margin-left: 15%;
+    background-color: rgb(224, 224, 182);
+    .card-img-top:hover {
+        transform: scale(1.1,1.1);
+    }
+    .list-group-item {
+        background-color: rgb(158, 163, 107);
+        color: cornsilk;
+    }    
+}
+
+
+/* ESTILO DEL FORMULARIO DE CONTACTO */
+
+.formulario__div {
+    display: grid;
+    justify-items: center;
+    justify-content: space-evenly;
+    .formulario__estilo {
+        color:rgb(28, 46, 46);
+        width:$ancho *20;
+        padding:16px;
+        font-size: 1em;
+        border-radius:10px;
+        margin:auto;
+        background-color:#ccc;
+        text-align: center;
+        .formulario__campo {
+            .formulario__titulo {
+                .formulario__interfaz {
+                    font-weight:bold;
+                    display:inline-block;
+                    .formulario__item {
+                        text-align: center;
+                        width:200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CONSULTA DE CONTACTO */
+
+.boton {
+    background-color:rgb(187, 187, 129);
+    color: rgb(61, 61, 61);
+    width: $ancho *5;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+
+/* ESTILO DEL MAIN */
+
+.main__titulo {
+    margin-left: $marginLeft;
+    margin-bottom: 20px;
+    height: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: nowrap;
+    .main__titulo1 {
+        color:rgb(82, 47, 4);
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 25px;
+        margin-top: 10px;
+        animation-name: aparecer;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    .main__parrafo {
+        text-align: justify;
+        line-height: 1.6;
+        margin-left: 35px;
+        margin-right: 15px;
+        height: 40%;
+        width: 90%;
+        vertical-align: text-top;
+    }
+    #carouselExampleIndicators {
+        max-width: 30%;
+        margin-left: 35%;
+    }
+    .main__titulo2 {
+        @extend .main__titulo;
+        color:rgb(44, 25, 1);
+    }
+    .main__titulo3 {
+        @extend .main__titulo;
+        color:rgb(143, 81, 6);
+    }
+    .main__titulo4 {
+        @extend .main__titulo;
+        color:rgb(105, 60, 4);
+        text-align: center;
+    }
+    .main__lista {
+        color: rgb(61, 56, 26)
+    }  
+}
+
+
+/* DISEÑO DEL FOOTER */
+
+footer {
+    background-image: linear-gradient(to right,rgb(143, 142, 142),rgb(41, 40, 40));
+    .footer__div {
+        .footer__navegador {
+            .footer__lista {
+                .footer__items {
+                    color: rgb(212, 208, 208);
+                    text-decoration: none;
+                    padding-top: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .footer__parrafo {
+            color: rgb(142, 145, 110);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+    }
+}
