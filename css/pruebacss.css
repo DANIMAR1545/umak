@@ -40,7 +40,7 @@ ul {
 header {
   background-color: #e6e6e6;
   width: 100%;
-  height: max-content; }
+  max-height: 100px; }
   header .header__estructura {
     display: flex;
     flex-direction: row; }
@@ -55,11 +55,11 @@ header {
       width: 15%;
       align-items: flex-start; }
       header .header__estructura .header__link .header__imagen {
-        width: 80px;
+        height: 10%;
         align-items: flex-start;
-        padding-top: 3%;
-        margin-left: 3%;
-        margin-bottom: 3%; }
+        padding-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%; }
 
 /* COMIENZO ESTILO DEL NAV */
 .navegador__lista {
@@ -97,8 +97,12 @@ body {
     opacity: 1; } }
 
 /* ESTILO DE CARDS */
+.row {
+  width: 90%; }
+
 .card {
   margin-left: 15%;
+  margin-top: 10%;
   background-color: #e0e0b6; }
   .card .card-img-top:hover {
     transform: scale(1.1, 1.1); }
@@ -106,22 +110,17 @@ body {
     background-color: #9ea36b;
     color: cornsilk; }
 
-/* ESTILO PAGINA ERROR */
+/* ESTILO GOOGLE MAPS */
+.map {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
 
-.error__pagina {
-  display: flex; }
-  .error__imagen {
-  background-image: center;
-  width: 100%; }
-
-.error__redireccionamiento {
-  color: #866d0a;
-  text-decoration: none;
-  font-size: 35px;}
-
-.error__redireccionamiento:hover {
-    background: #aaaa56;
-    color: black; }
+.medidasMap {
+  left: 0;
+  top: 0;
+  height: 90%;
+  width: 90%; }
 
 /* ESTILO DEL FORMULARIO DE CONTACTO */
 .formulario__div {
@@ -166,10 +165,7 @@ main {
     color: #522f04;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 25px;
-    margin-top: 10px;
-    animation-name: aparecer;
-    animation-duration: 5s;
-    animation-iteration-count: infinite; }
+    margin-top: 10px; }
   main .main__parrafo {
     text-align: justify;
     line-height: 1.6;
@@ -179,8 +175,7 @@ main {
     width: 90%;
     vertical-align: text-top; }
   main #carouselExampleIndicators {
-    max-width: 30%;
-    margin-left: 35%; }
+    width: 100%; }
   main .main__titulo2 {
     color: #2c1901; }
   main .main__titulo3 {
@@ -191,15 +186,47 @@ main {
   main .main__lista {
     color: #3d381a; }
 
+  /* ESTILO SECCIN NOVEDADES */
+
+.error__imagen {
+  width: 100%;
+}
+
+.error__redireccionamiento {
+  text-decoration: none;
+  color: #303002;
+  font-size: 35px; }
+  .error__redireccionamiento:hover {
+    background-color: #bebe7e;
+    color: #050505; }
+
+/* ESTILO IMAGEN ACERCA DE NOSOTROS */
+.nosotros__estructura {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: center; }
+
+.nosotros__imagen {
+  grid-column: 2;
+  width: 100%;
+  height: auto; }
+  .nosotros__imagen:hover {
+    transform: scale(1.05, 1.05); }
+
 /* DISEÑO DEL FOOTER */
 footer {
   background-image: linear-gradient(to right, #8f8e8e, #292828); }
-  footer .footer__div .footer__navegador .footer__lista .footer__items {
-    color: #d4d0d0;
-    text-decoration: none;
-    padding-top: 10px;
-    margin-left: 10px; }
-  footer .footer__div .footer__parrafo {
-    color: #8e916e;
-    text-align: center;
-    padding-bottom: 15px; }
+  footer .footer__div {
+    display: grid;
+    grid-template-columns: 15% 70% 15%; }
+    footer .footer__div .footer__navegador .footer__lista .footer__items {
+      color: #d4d0d0;
+      grid-column: 1;
+      text-decoration: none;
+      padding-top: 5%;
+      margin-left: 5%; }
+    footer .footer__div .footer__parrafo {
+      color: #e2e6ad;
+      grid-column: 2;
+      text-align: center;
+      margin-top: 5%; }
